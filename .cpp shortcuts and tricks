@@ -1,0 +1,1 @@
+__lg(n) -> gives index of highest set bit.
