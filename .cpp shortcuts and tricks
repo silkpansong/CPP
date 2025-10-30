@@ -1,1 +1,2 @@
 __lg(n) -> gives index of highest set bit.
+is_permutation(s.begin(), s.end(), t.begin())) -> tells if t is a permutation of s.
