@@ -1,0 +1,31 @@
+long long modInverse(long long b, long long m) {
+    long long m0 = m;
+    long long t, q;
+    long long x0 = 0, x1 = 1;
+    b = (b % m + m) % m;
+
+    while (b > 1) {
+        q = b / m;
+        t = m;
+        m = b % m;
+        b = t;
+        t = x0;
+        x0 = x1 - q * x0;
+        x1 = t;
+    }
+    x1 = (x1 % m0 + m0) % m0;
+    return x1;
+}
+
+long long fractionModuloN(long long numerator, long long denominator, long long modulo_n) {
+    long long common = gcd(numerator, denominator);
+    numerator /= common;
+    denominator /= common;
+
+    long long inv_den = modInverse(denominator, modulo_n);
+    long long result = (numerator % modulo_n * inv_den) % modulo_n;
+    if (result < 0) {
+        result += modulo_n;
+    }
+    return result;
+}
