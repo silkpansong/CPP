@@ -1,2 +1,3 @@
 __lg(n) -> gives index of highest set bit.
 is_permutation(s.begin(), s.end(), t.begin())) -> tells if t is a permutation of s.
+bitset<10> a(n) // creates a bitset datastructure basically. It can also be used to do many bit operations.
