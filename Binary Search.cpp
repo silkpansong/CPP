@@ -11,3 +11,17 @@ while (l < r) {
     }
 }
 return l; // first true
+
+
+// If you want instead 
+// true, true, true, false, false, false
+
+ll l = low, r = high;
+while(l<r){
+    ll mid = l + (r-l+1)/2 // bias right
+    if(check(mid)){
+        l=mid;
+    } else{
+        r = mid-1;
+    }
+}
