@@ -1,4 +1,4 @@
-// Minimum Range Query with Range Update
+// Minimum Range Query with Point Update
 #include <bits/stdc++.h>
 using namespace std;
 
